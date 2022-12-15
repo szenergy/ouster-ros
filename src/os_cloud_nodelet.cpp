@@ -45,9 +45,9 @@ class OusterCloud : public nodelet::Nodelet {
         auto tf_prefix = pnh.param("tf_prefix", std::string{});
         if (is_arg_set(tf_prefix) && tf_prefix.back() != '/')
             tf_prefix.append("/");
-        sensor_frame = tf_prefix + "os_sensor";
-        imu_frame = tf_prefix + "os_imu";
-        lidar_frame = tf_prefix + "os_lidar";
+        sensor_frame = tf_prefix + "os1_sensor";
+        imu_frame = tf_prefix + "os1_imu";
+        lidar_frame = tf_prefix + "os1_lidar";
         auto timestamp_mode_arg = pnh.param("timestamp_mode", std::string{});
         use_ros_time = timestamp_mode_arg == "TIME_FROM_ROS_TIME";
 
